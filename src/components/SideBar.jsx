@@ -1,7 +1,11 @@
 export default function SideBar({ handleToggleModal }) {
   return (
     <div className="sidebar">
-      <div className="bgOverlay"></div>
+      <div 
+        className="bgOverlay"
+        onClick={handleToggleModal}
+      >
+      </div>
       <div className="sidebarContent">
         <h2>The Brutal Martian Landscape</h2>
         <div>
