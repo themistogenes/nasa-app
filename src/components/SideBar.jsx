@@ -1,4 +1,4 @@
-export default function SideBar() {
+export default function SideBar({ handleToggleModal }) {
   return (
     <div className="sidebar">
       <div className="bgOverlay"></div>
@@ -10,7 +10,9 @@ export default function SideBar() {
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi iste, consectetur excepturi perferendis temporibus quo ducimus ea quaerat vitae blanditiis impedit optio ab ex assumenda, possimus modi voluptatum provident explicabo!
           </p>
         </div>
-        <button>
+        <button
+          onClick={handleToggleModal}
+        >
           <i className="fa-solid fa-arrow-right"></i>
         </button>
       </div>
