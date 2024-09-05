@@ -1,4 +1,4 @@
-export default function SideBar({ handleToggleModal }) {
+export default function SideBar({ handleToggleModal, data }) {
   return (
     <div className="sidebar">
       <div 
@@ -7,11 +7,11 @@ export default function SideBar({ handleToggleModal }) {
       >
       </div>
       <div className="sidebarContent">
-        <h2>The Brutal Martian Landscape</h2>
+        <h2>{data?.title}</h2>
         <div>
-          <p>Description</p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi iste, consectetur excepturi perferendis temporibus quo ducimus ea quaerat vitae blanditiis impedit optio ab ex assumenda, possimus modi voluptatum provident explicabo!
+          <p className="descriptionTitle">{data?.date}</p>
+          <p className="descriptionContainer">
+            {data?.explanation}
           </p>
         </div>
         <button
