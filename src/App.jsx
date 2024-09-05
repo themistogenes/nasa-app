@@ -23,7 +23,7 @@ function App() {
       if (localStorage.getItem(localKey)) {
         const apiData = JSON.parse(localStorage.getItem(localKey));
         setData(apiData);
-        console.log('Fetched from cache today');
+        console.log('Data fetched from cache today');
         console.log('DATA\n', apiData);
         return;
       }
@@ -38,7 +38,7 @@ function App() {
         localStorage.setItem(localKey, JSON.stringify(apiData));
 
         setData(apiData);
-        console.log('Fetched from API today');
+        console.log('Data fetched from API today');
         console.log('DATA\n', apiData);
       } catch (err) {
         console.log(err.message);
